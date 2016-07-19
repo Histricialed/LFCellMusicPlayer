@@ -18,6 +18,7 @@
 
 @implementation LJAudioPlayerManager
 
+/*manager的单例*/
 + (instancetype)sharedInstance
 {
     static LJAudioPlayerManager * _instance = nil;
@@ -29,6 +30,7 @@
     return _instance;
 }
 
+/*完整的描述请参见文件头部*/
 - (void)loadAudioWithURL:(NSURL *)audioURL andPlayingCellIndexPath:(NSIndexPath *)indexPath {
     if ([self.privatePlayer isPlaying]) {
         [self.privatePlayer stop];
@@ -38,6 +40,7 @@
     self.privatePlayer.delegate = self;
 }
 
+/*播放音频，并设置timer定期更新播放进度	*/
 - (void)playAudio {
     if (_timer ==nil) {
         _timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(updateProgress) userInfo:nil repeats:YES];
@@ -45,12 +48,14 @@
     [self.privatePlayer play];
 }
 
+/*暂停音频，并停止timer*/
 - (void)pauseAudio {
     [_timer invalidate];
     _timer = nil;
     [self.privatePlayer pause];
 }
 
+/*<#完整的描述请参见文件头部#>*/
 - (void)stopAudio {
     [_timer invalidate];
     _timer = nil;

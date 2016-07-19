@@ -27,6 +27,8 @@ typedef void (^ControlButtonClickBlock)(NSIndexPath *indexPath,NSNumber *status,
 @property (weak, nonatomic) NSIndexPath *indexPath;
 @property (copy, nonatomic) NSURL *voiceURL;
 
+@property (assign, nonatomic) float progress;
+
 @property (copy, nonatomic) ReturnSliderValueBlock returnSliderValueBlock;
 @property (copy, nonatomic) ControlButtonClickBlock controlButtonClickBlock;
 

@@ -19,7 +19,7 @@
 + (id)randomItem
 {
     // Create an array of three adjectives
-    NSArray *randomAdjectiveList = @[@"清华园", @"华清嘉园", @"西王庄小区", @"东王庄小区", @"水清木华园", @"东升园", @"领袖新硅谷", @"铭科苑", @"海宝小区"];
+    NSArray *randomAdjectiveList = @[@"声音文件"];
     NSInteger adjectiveIndex = rand() % [randomAdjectiveList count];
     NSString *randomName = [NSString stringWithFormat:@"%@",
                                 randomAdjectiveList[adjectiveIndex]];

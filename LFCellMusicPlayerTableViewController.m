@@ -88,14 +88,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    WEAKSELF();
     __weak LFCellMusicPlayerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LFCellMusicPlayerTableViewCell"
                                                         forIndexPath:indexPath];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     NSArray *items = [[BNRItemStore sharedStore] allItems];
     BNRItem *item = items[indexPath.row];
 
-    cell.titleLabel.text = [NSString stringWithFormat:@"%ld%@",indexPath.row,item.itemName];
+    cell.titleLabel.text = [NSString stringWithFormat:@"%@%ld",item.itemName,indexPath.row];
     cell.roomLabel.text = item.serialNumber;
     cell.priceLabel.text = [NSString stringWithFormat:@"%d万", item.valueInDollars];
     cell.indexPath = indexPath;
