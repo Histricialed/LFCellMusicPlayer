@@ -2,7 +2,7 @@
 //  LJAudioPlayerManager.h
 //  UITableView
 //
-//  Created by 李志强 on 16/7/13.
+//  Created by LaFleur on 16/7/13.
 //  Copyright © 2016年 Lianjia. All rights reserved.
 //
 

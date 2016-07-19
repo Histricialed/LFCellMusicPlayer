@@ -2,7 +2,7 @@
 //  BNRItemStore.h
 //  UITableView
 //
-//  Created by 李志强 on 16/3/22.
+//  Created by LaFleur on 16/3/22.
 //  Copyright © 2016年 Lianjia. All rights reserved.
 //
 

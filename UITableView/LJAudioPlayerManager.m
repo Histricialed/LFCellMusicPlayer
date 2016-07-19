@@ -2,7 +2,7 @@
 //  LJAudioPlayerManager.m
 //  UITableView
 //
-//  Created by 李志强 on 16/7/13.
+//  Created by LaFleur on 16/7/13.
 //  Copyright © 2016年 Lianjia. All rights reserved.
 //
 
@@ -82,8 +82,8 @@
     }
     self.privatePlayer = nil;
     self.playingCellIndexPath = nil;
-    [_timer invalidate];
-    _timer = nil;
+//    [_timer invalidate];
+//    _timer = nil;
 }
 
 - (NSDictionary *)changePlayerStatusByCellStatus:(NSInteger)status andCellIndexPath:(NSIndexPath *)indexPath andCellVoiceURL:(NSURL *)voiceURL andCurrentProgress:(float)progress {

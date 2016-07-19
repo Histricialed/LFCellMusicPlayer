@@ -14,12 +14,12 @@
 		822122BD1CA0E66C00168F11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822122BB1CA0E66C00168F11 /* LaunchScreen.storyboard */; };
 		822122C81CA0E66C00168F11 /* UITableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 822122C71CA0E66C00168F11 /* UITableViewTests.m */; };
 		822122D31CA0E66C00168F11 /* UITableViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 822122D21CA0E66C00168F11 /* UITableViewUITests.m */; };
-		822122E51CA0E6D300168F11 /* BNRItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 822122E41CA0E6D300168F11 /* BNRItemsViewController.m */; };
+		822122E51CA0E6D300168F11 /* LFCellMusicPlayerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 822122E41CA0E6D300168F11 /* LFCellMusicPlayerTableViewController.m */; };
 		822122EB1CA0E9F500168F11 /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 822122EA1CA0E9F500168F11 /* BNRItemStore.m */; };
 		822122EE1CA0F92200168F11 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 822122ED1CA0F92200168F11 /* BNRItem.m */; };
 		8232E2831D38EC88008C8FB0 /* myBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8232E2821D38EC88008C8FB0 /* myBundle.bundle */; };
-		82E0BE821CA12BF100B83F3D /* BNRItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E0BE811CA12BF100B83F3D /* BNRItemCell.m */; };
-		82E0BE881CA1333300B83F3D /* BNRItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82E0BE871CA1333300B83F3D /* BNRItemCell.xib */; };
+		82E0BE821CA12BF100B83F3D /* LFCellMusicPlayerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E0BE811CA12BF100B83F3D /* LFCellMusicPlayerTableViewCell.m */; };
+		82E0BE881CA1333300B83F3D /* LFCellMusicPlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82E0BE871CA1333300B83F3D /* LFCellMusicPlayerTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,16 +55,16 @@
 		822122CE1CA0E66C00168F11 /* UITableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		822122D21CA0E66C00168F11 /* UITableViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITableViewUITests.m; sourceTree = "<group>"; };
 		822122D41CA0E66C00168F11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		822122E31CA0E6D300168F11 /* BNRItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNRItemsViewController.h; path = ../BNRItemsViewController.h; sourceTree = "<group>"; };
-		822122E41CA0E6D300168F11 /* BNRItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRItemsViewController.m; path = ../BNRItemsViewController.m; sourceTree = "<group>"; };
+		822122E31CA0E6D300168F11 /* LFCellMusicPlayerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LFCellMusicPlayerTableViewController.h; path = ../LFCellMusicPlayerTableViewController.h; sourceTree = "<group>"; };
+		822122E41CA0E6D300168F11 /* LFCellMusicPlayerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LFCellMusicPlayerTableViewController.m; path = ../LFCellMusicPlayerTableViewController.m; sourceTree = "<group>"; };
 		822122E91CA0E9F500168F11 /* BNRItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItemStore.h; sourceTree = "<group>"; };
 		822122EA1CA0E9F500168F11 /* BNRItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItemStore.m; sourceTree = "<group>"; };
 		822122EC1CA0F91D00168F11 /* BNRItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRItem.h; sourceTree = "<group>"; };
 		822122ED1CA0F92200168F11 /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
 		8232E2821D38EC88008C8FB0 /* myBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = myBundle.bundle; sourceTree = "<group>"; };
-		82E0BE801CA12BF100B83F3D /* BNRItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItemCell.h; sourceTree = "<group>"; };
-		82E0BE811CA12BF100B83F3D /* BNRItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItemCell.m; sourceTree = "<group>"; };
-		82E0BE871CA1333300B83F3D /* BNRItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BNRItemCell.xib; sourceTree = "<group>"; };
+		82E0BE801CA12BF100B83F3D /* LFCellMusicPlayerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFCellMusicPlayerTableViewCell.h; sourceTree = "<group>"; };
+		82E0BE811CA12BF100B83F3D /* LFCellMusicPlayerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFCellMusicPlayerTableViewCell.m; sourceTree = "<group>"; };
+		82E0BE871CA1333300B83F3D /* LFCellMusicPlayerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFCellMusicPlayerTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,11 +123,11 @@
 				822122E91CA0E9F500168F11 /* BNRItemStore.h */,
 				822122EA1CA0E9F500168F11 /* BNRItemStore.m */,
 				822122B91CA0E66C00168F11 /* Assets.xcassets */,
-				822122E31CA0E6D300168F11 /* BNRItemsViewController.h */,
-				822122E41CA0E6D300168F11 /* BNRItemsViewController.m */,
-				82E0BE801CA12BF100B83F3D /* BNRItemCell.h */,
-				82E0BE811CA12BF100B83F3D /* BNRItemCell.m */,
-				82E0BE871CA1333300B83F3D /* BNRItemCell.xib */,
+				822122E31CA0E6D300168F11 /* LFCellMusicPlayerTableViewController.h */,
+				822122E41CA0E6D300168F11 /* LFCellMusicPlayerTableViewController.m */,
+				82E0BE801CA12BF100B83F3D /* LFCellMusicPlayerTableViewCell.h */,
+				82E0BE811CA12BF100B83F3D /* LFCellMusicPlayerTableViewCell.m */,
+				82E0BE871CA1333300B83F3D /* LFCellMusicPlayerTableViewCell.xib */,
 				822122BB1CA0E66C00168F11 /* LaunchScreen.storyboard */,
 				822122BE1CA0E66C00168F11 /* Info.plist */,
 				822122AD1CA0E66C00168F11 /* Supporting Files */,
@@ -270,7 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				822122BD1CA0E66C00168F11 /* LaunchScreen.storyboard in Resources */,
-				82E0BE881CA1333300B83F3D /* BNRItemCell.xib in Resources */,
+				82E0BE881CA1333300B83F3D /* LFCellMusicPlayerTableViewCell.xib in Resources */,
 				822122BA1CA0E66C00168F11 /* Assets.xcassets in Resources */,
 				8232E2831D38EC88008C8FB0 /* myBundle.bundle in Resources */,
 			);
@@ -298,8 +298,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				822122EB1CA0E9F500168F11 /* BNRItemStore.m in Sources */,
-				82E0BE821CA12BF100B83F3D /* BNRItemCell.m in Sources */,
-				822122E51CA0E6D300168F11 /* BNRItemsViewController.m in Sources */,
+				82E0BE821CA12BF100B83F3D /* LFCellMusicPlayerTableViewCell.m in Sources */,
+				822122E51CA0E6D300168F11 /* LFCellMusicPlayerTableViewController.m in Sources */,
 				822122EE1CA0F92200168F11 /* BNRItem.m in Sources */,
 				822122B21CA0E66C00168F11 /* AppDelegate.m in Sources */,
 				820D38141D35F2FC00576C5B /* LJAudioPlayerManager.m in Sources */,

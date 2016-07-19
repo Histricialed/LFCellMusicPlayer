@@ -2,12 +2,12 @@
 //  AppDelegate.m
 //  UITableView
 //
-//  Created by 李志强 on 16/3/22.
+//  Created by LaFleur on 16/3/22.
 //  Copyright © 2016年 Lianjia. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "BNRItemsViewController.h"
+#import "LFCellMusicPlayerTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    BNRItemsViewController *itemsViewController = [[BNRItemsViewController alloc] init];
+    LFCellMusicPlayerTableViewController *itemsViewController = [[LFCellMusicPlayerTableViewController alloc] init];
     
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:itemsViewController];
     
