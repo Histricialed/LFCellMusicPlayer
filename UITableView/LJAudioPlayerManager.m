@@ -11,7 +11,6 @@
 @interface LJAudioPlayerManager()
 
 @property (nonatomic, strong) AVAudioPlayer *privatePlayer;
-@property (nonatomic, weak) NSIndexPath *playingCellIndexPath;
 @property (nonatomic, strong) NSTimer *timer;
 
 @end
@@ -55,7 +54,7 @@
     [self.privatePlayer pause];
 }
 
-/*<#完整的描述请参见文件头部#>*/
+/*切换音乐的时候需要停止，再继续载入*/
 - (void)stopAudio {
     [_timer invalidate];
     _timer = nil;
@@ -63,6 +62,7 @@
     self.privatePlayer = nil;
 }
 
+/*获取当前播放器状态*/
 - (int)getPlayerStatus {
     if ([self.privatePlayer isPlaying]) {
         return 1; // 播放
@@ -73,6 +73,10 @@
     }
 }
 
+/**
+ * @brief 获取当前播放器的播放进度
+ * @return progress播放进度
+ */
 - (float)getCurrentProgress {
     if (self.privatePlayer) {
         return self.privatePlayer.currentTime/self.privatePlayer.duration;
@@ -81,16 +85,21 @@
     }
 }
 
+/**
+ * @brief 播放器播放完成后的回调
+ * @param player 播放器对象
+ * @param flag 播放成功的标记
+ * @return N/A
+ */
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
     if (self.AudioPlayerFinishPlayingBlock) {
         self.AudioPlayerFinishPlayingBlock(flag,self.playingCellIndexPath);
     }
-    self.privatePlayer = nil;
+    [self stopAudio];
     self.playingCellIndexPath = nil;
-//    [_timer invalidate];
-//    _timer = nil;
 }
 
+/*完整的描述请参见文件头部*/
 - (NSDictionary *)changePlayerStatusByCellStatus:(NSInteger)status andCellIndexPath:(NSIndexPath *)indexPath andCellVoiceURL:(NSURL *)voiceURL andCurrentProgress:(float)progress {
     NSDictionary *cellsStatus = [[NSDictionary alloc] init];
     if (!self.playingCellIndexPath) {
@@ -181,6 +190,10 @@
     return nil;
 }
 
+/**
+ * @brief 播放器在播放时实时更新播放进度（用于更新slider）
+ * @return N/A
+ */
 - (void)updateProgress{
     //进度条显示播放进度
     float progress = [self getCurrentProgress];
@@ -189,6 +202,7 @@
     }
 }
 
+/*完整的描述请参见文件头部*/
 - (void)setPlayerProgressByProgress:(float)progress {
     if ([self.privatePlayer isPlaying]) {
         self.privatePlayer.currentTime = self.privatePlayer.duration * progress;

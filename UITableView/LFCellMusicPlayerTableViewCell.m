@@ -53,17 +53,14 @@
     switch ([self.status integerValue]) {
         case ELJVoiceStatusStop:
             [self.controlButton setImage:[UIImage imageNamed:@"icon_play"] forState:UIControlStateNormal];
-            self.voiceFollowSlider.enabled = NO;
             break;
             
         case ELJVoiceStatusPlay:
             [self.controlButton setImage:[UIImage imageNamed:@"icon_pause"] forState:UIControlStateNormal];
-            self.voiceFollowSlider.enabled = YES;
             break;
             
         case ELJVoiceStatusPause:
             [self.controlButton setImage:[UIImage imageNamed:@"icon_play"] forState:UIControlStateNormal];
-            self.voiceFollowSlider.enabled = NO;
             break;
             
         default:

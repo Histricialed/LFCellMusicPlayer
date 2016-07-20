@@ -108,7 +108,7 @@
     }
     cell.returnSliderValueBlock = ^(float value,NSIndexPath *indexPath) {
         self.timeArray[indexPath.row] = [NSNumber numberWithFloat:value];
-        if (cell.indexPath == indexPath) {
+        if ([LJAudioPlayerManager sharedInstance].playingCellIndexPath == indexPath) {
             [[LJAudioPlayerManager sharedInstance] setPlayerProgressByProgress:value];
         }
     };
@@ -149,6 +149,7 @@
         if (flag) {
             finishedCell.status = [NSNumber numberWithInt:0];
             [finishedCell setControlButtonType];
+            finishedCell.voiceFollowSlider.value = 0;
             if (finishedCell != currentCell) {
                 [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
             }
