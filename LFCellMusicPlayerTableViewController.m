@@ -154,6 +154,7 @@
                 [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
             }
             self.cellStatusArray[indexPath.row] = [NSNumber numberWithInt:0];
+            self.timeArray[indexPath.row] = [NSNumber numberWithFloat:0];
         }
     };
     

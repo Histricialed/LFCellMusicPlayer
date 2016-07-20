@@ -95,8 +95,8 @@
     if (self.AudioPlayerFinishPlayingBlock) {
         self.AudioPlayerFinishPlayingBlock(flag,self.playingCellIndexPath);
     }
+    [_timer invalidate];
     [self stopAudio];
-    self.playingCellIndexPath = nil;
 }
 
 /*完整的描述请参见文件头部*/
