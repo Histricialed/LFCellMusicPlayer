@@ -29,6 +29,26 @@
     return _instance;
 }
 
+-(void)routeChange:(NSNotification *)notification{
+    NSDictionary *dic=notification.userInfo;
+    int changeReason= [dic[AVAudioSessionRouteChangeReasonKey] intValue];
+    //等于AVAudioSessionRouteChangeReasonOldDeviceUnavailable表示旧输出不可用
+    if (changeReason==AVAudioSessionRouteChangeReasonOldDeviceUnavailable) {
+        AVAudioSessionRouteDescription *routeDescription=dic[AVAudioSessionRouteChangePreviousRouteKey];
+        AVAudioSessionPortDescription *portDescription= [routeDescription.outputs firstObject];
+        //原设备为耳机则暂停
+        if ([portDescription.portType isEqualToString:@"Headphones"]) {
+            [self pauseAudio];
+        }
+    } else if (changeReason == AVAudioSessionRouteChangeReasonNewDeviceAvailable) {
+        AVAudioSessionRouteDescription *routeDescription=dic[AVAudioSessionRouteChangePreviousRouteKey];
+        AVAudioSessionPortDescription *portDescription= [routeDescription.outputs firstObject];
+        if ([portDescription.portType isEqualToString:@"Receiver"]) {
+            [self pauseAudio];
+        }
+    }
+}
+
 /*完整的描述请参见文件头部*/
 - (void)loadAudioWithURL:(NSURL *)audioURL andPlayingCellIndexPath:(NSIndexPath *)indexPath {
     if ([self.privatePlayer isPlaying]) {
@@ -45,6 +65,8 @@
         _timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(updateProgress) userInfo:nil repeats:YES];
     }
     [self.privatePlayer play];
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(routeChange:) name:AVAudioSessionRouteChangeNotification object:nil];
 }
 
 /*暂停音频，并停止timer*/
@@ -60,6 +82,7 @@
     _timer = nil;
     [self.privatePlayer stop];
     self.privatePlayer = nil;
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:AVAudioSessionRouteChangeNotification object:nil];
 }
 
 /*获取当前播放器状态*/
